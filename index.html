@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BSIT Student Registration</title>
+    <style>
+        :root {
+            --teal: #0f766e;
+            --teal-dark: #115e59;
+            --gold: #f5b83d;
+            --ink: #1f2d2b;
+            --cream: #fff6dc;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            color: var(--ink);
+            line-height: 1.5;
+            background: radial-gradient(ellipse at center, #eaf4f1 50%, #b5d1c9 100%);
+            background-attachment: fixed;
+            padding: 40px 20px 0;
+            text-align: center;
+        }
+
+        /* Heading with text shadow and a small gold underline */
+        h1 {
+            color: var(--teal-dark);
+            text-shadow: 3px 3px 5px rgba(0,0,0,0.25);
+        }
+        h1::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 4px;
+            margin: 12px auto 0;
+            background: var(--gold);
+            border-radius: 2px;
+        }
+
+        /* Images */
+        img {
+            opacity: 0.85;
+            transition: 0.3s;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        img:hover {
+            opacity: 1;
+            transform: rotate(-10deg) scale(1.05);
+        }
+
+        @keyframes float {
+            0%   { transform: translateY(0); }
+            50%  { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+        .float { animation: float 3s ease-in-out infinite; }
+
+        /* Cards side by side, wrap on small screens */
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        section {
+            background-color: white;
+            padding: 24px 20px;
+            width: 250px;
+            border-radius: 12px;
+            border-top: 5px solid var(--teal);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+            transition: 0.3s;
+        }
+        section h3 { margin-top: 0; color: var(--teal-dark); }
+
+        section:hover,
+        section:focus-within {
+            background-color: var(--cream);
+            border-top-color: var(--gold);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+            transform: translateY(-10px) scale(1.05);
+        }
+
+        /* Card buttons */
+        section a {
+            display: inline-block;
+            background-color: var(--teal);
+            color: white;
+            padding: 8px 20px;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+        section a:hover {
+            background-color: var(--gold);
+            color: black;
+        }
+
+        a:focus-visible {
+            outline: 3px solid var(--gold);
+            outline-offset: 3px;
+        }
+
+        /* Audio and video box */
+        aside {
+            max-width: 640px;
+            margin: 40px auto 0;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        aside h2 { margin-top: 0; color: var(--teal-dark); }
+        audio { width: 100%; max-width: 400px; }
+        video {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 24px 0;
+            font-size: 0.9rem;
+            color: #4b5f5b;
+        }
+
+        @media (max-width: 600px) {
+            section { width: 100%; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * { animation: none !important; transition: none !important; }
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.ctu.edu.ph" target="_blank">
+        <img src="bsit-logo-removebg-preview.png" alt="BSIT Logo" width="150">
+    </a>
+
+    <h1>Welcome to BSIT Student Registration Webpage</h1>
+    <img class="float" src="student.jpg" alt="BSIT Student" width="150" height="150">
+    <img class="float" src="student1.jpg" alt="BSIT Student" width="150" height="150">
+    <img class="float" src="student2.jpg" alt="BSIT Student" width="150" height="150">
+    <br><br>
+
+    <main>
+        <section>
+            <h3>Student Table</h3>
+            <p>See all registered students.</p>
+            <a href="studentregistration.html">View</a>
+        </section>
+
+        <section>
+            <h3>Registration</h3>
+            <p>Add a new student.</p>
+            <a href="registration.html">Register</a>
+        </section>
+
+        <section>
+            <h3>HTML Tutorial</h3>
+            <p>Practice your HTML skills.</p>
+            <a href="https://www.w3schools.com/Html/" target="_blank">Learn</a>
+        </section>
+
+        <section>
+            <h3>Python Course</h3>
+            <p>Learn python Full Course with BroCode for Free.</p>
+            <a href="https://youtu.be/ix9cRaBkVe0?si=1DI4Mv648cwRleEj" target="_blank">View</a>
+        </section>
+
+        <section>
+            <h3>Stream Movies</h3>
+            <p>Relax and have fun watching movies for free.</p>
+            <a href="https://rivestream.ru/" target="_blank">View</a>
+        </section>
+    </main>
+
+    <aside>
+        <h2>Media</h2>
+        <p>A short audio introduction to the Webpage.</p>
+        <audio controls>
+            <source src="audio.m4a" type="audio/mp4">
+        </audio>
+        <p>A short educational video about Information Technology.</p>
+        <video width="400" controls>
+            <source src="educational-video.mp4" type="video/mp4">
+        </video>
+    </aside>
+
+    <footer>
+        <p>BSIT Student Registration &copy; 2026</p>
+    </footer>
+</body>
+</html>
