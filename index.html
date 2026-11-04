@@ -74,6 +74,8 @@
             background-color: white;
             padding: 24px 20px;
             width: 250px;
+            flex: 1 1 220px;
+            max-width: 250px;
             border-radius: 12px;
             border-top: 5px solid var(--teal);
             box-shadow: 0 4px 10px rgba(0,0,0,0.25);
@@ -135,7 +137,27 @@
         }
 
         @media (max-width: 600px) {
-            section { width: 100%; }
+            body {
+                padding-top: 24px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            section {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            aside {
+                padding: 16px;
+            }
         }
 
         @media (prefers-reduced-motion: reduce) {
