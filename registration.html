@@ -94,12 +94,15 @@
             color: var(--teal-dark);
         }
 
-        /* Labels on the left, inputs on the right */
-        fieldset.fields {
-            display: grid;
-            grid-template-columns: max-content 1fr;
-            gap: 12px 14px;
-            align-items: center;
+        fieldset.fields label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        fieldset.fields input,
+        fieldset.fields textarea {
+            margin-bottom: 14px;
         }
 
         /* Radio buttons and checkboxes sit in a row */
@@ -137,10 +140,6 @@
         }
         textarea { resize: vertical; }
 
-        /* Show a green or red edge only after the user has typed */
-        input:not(:placeholder-shown):valid { border-color: #2e9e6b; }
-        input:not(:placeholder-shown):invalid { border-color: #d64545; }
-
         /* Buttons */
         fieldset.actions {
             display: flex;
@@ -165,8 +164,33 @@
         button[type="reset"]:hover { background: #cbd9d5; }
 
         @media (max-width: 560px) {
-            form { margin: 0 12px 40px; padding: 18px; }
-            fieldset.fields { grid-template-columns: 1fr; }
+            nav {
+                padding: 10px;
+            }
+
+            nav a {
+                width: 100%;
+                text-align: center;
+            }
+
+            form {
+                margin: 0 12px 40px;
+                padding: 16px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+                margin-top: 20px;
+            }
+
+            fieldset.choices {
+                display: block;
+            }
+
+            fieldset.choices label {
+                display: block;
+                margin: 8px 0;
+            }
         }
 
         @media (prefers-reduced-motion: reduce) {
@@ -176,7 +200,7 @@
 </head>
 <body>
     <nav>
-        <a href="index.html">Home</a>
+        <a href="home.html">Home</a>
         <a href="studentregistration.html">Student Registration Table</a>
         <a class="active" href="registration.html">Registration</a>
     </nav>
