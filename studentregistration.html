@@ -70,7 +70,6 @@
             border-radius: 2px;
         }
 
-        /* Lets the table scroll sideways on small screens */
         main {
             max-width: 1000px;
             margin: 24px auto 0;
@@ -80,6 +79,7 @@
 
         table {
             width: 100%;
+            min-width: 700px;
             margin: 0 auto;
             border-collapse: separate;
             border-spacing: 0;
@@ -116,6 +116,31 @@
             color: #4b5f5b;
         }
 
+        @media (max-width: 600px) {
+            nav {
+                padding: 10px;
+            }
+
+            nav a {
+                width: 100%;
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+                margin-top: 20px;
+            }
+
+            main {
+                padding: 0 8px;
+            }
+
+            th, td {
+                padding: 10px 8px;
+                font-size: 0.9rem;
+            }
+        }
+
         @media (prefers-reduced-motion: reduce) {
             * { transition: none !important; }
         }
@@ -123,7 +148,7 @@
 </head>
 <body>
     <nav>
-        <a href="index.html">Home</a>
+        <a href="home.html">Home</a>
         <a class="active" href="studentregistration.html">Student Registration Table</a>
         <a href="registration.html">Registration</a>
     </nav>
